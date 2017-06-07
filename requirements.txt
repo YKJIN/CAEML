@@ -1,0 +1,8 @@
+pyyaml==3.11
+pymongo
+jinja2
+pyparsing
+meshio
+numpy
+pipdated
+voropy

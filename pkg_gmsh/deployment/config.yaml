@@ -1,0 +1,8 @@
+docker_images:
+  gmsh:
+    path: "gmsh"
+    name: "renumics/gmsh"
+    repository: ""
+    cache: True
+
+

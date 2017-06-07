@@ -1,0 +1,7 @@
+Save "/data/mesh.med";
+Save "/data/mesh.unv";
+Save "/data/mesh.vrml";
+Save "/data/mesh.ply2";
+Save "/data/mesh.stl";
+Save "/data/mesh.mesh";
+Exit;

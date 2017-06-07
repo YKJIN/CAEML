@@ -1,0 +1,18 @@
+caemlType: caeml.common.tools.CommandLineTool
+baseCommand: addFiles.py
+name: addFiles
+inputParameters:
+  addend1:
+    parameterType: file
+    inputBinding:
+      position: 1
+  addend2:
+    parameterType: file
+    inputBinding:
+      position: 2
+outputParameters:
+  sum:
+    parameterType: float
+    outputBinding:
+      glob: stdout.txt
+stdout: stdout.txt

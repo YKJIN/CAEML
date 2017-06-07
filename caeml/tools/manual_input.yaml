@@ -1,0 +1,10 @@
+caemlType: caeml.common.tools.CommandLineTool
+baseCommand: .../caeml/tools/manual_input.py
+inputParameters: {}
+name: manualInput
+outputParameters:
+  in:
+    parameterType: str
+    outputBinding:
+      glob: stdout.txt
+stdout: stdout.txt

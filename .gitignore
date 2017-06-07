@@ -1,0 +1,5 @@
+*.idea
+*.pyc
+.coverage
+testproject/tests/test_project_directory
+.cache

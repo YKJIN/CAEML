@@ -1,0 +1,22 @@
+caemlType: caeml.common.tools.CommandLineTool
+baseCommand: stats.py
+name: stats
+inputParameters:
+  data:
+    parameterType: []
+    inputBinding:
+      position: 1
+      prefix: --data
+outputParameters:
+  mean:
+    parameterType: file
+    outputBinding:
+      glob: mean.txt
+  min:
+    parameterType: file
+    outputBinding:
+      glob: min.txt
+  max:
+    parameterType: file
+    outputBinding:
+      glob: max.txt

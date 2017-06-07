@@ -1,0 +1,15 @@
+caemlType: caeml.common.tools.CommandLineTool
+baseCommand: addList.py
+name: addList
+inputParameters:
+  addends:
+    parameterType: []
+    inputBinding:
+      position: 1
+      prefix: --addends
+outputParameters:
+  sum:
+    parameterType: float
+    outputBinding:
+      glob: stdout.txt
+stdout: stdout.txt

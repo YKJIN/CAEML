@@ -1,0 +1,27 @@
+caemlType: caeml.common.tools.DockerizedCommandLineTool
+baseCommand: /usr/local/bin/code_aster.py
+name: CodeAster
+stdout: stdout.txt
+dockerImageId: renumics/code-aster
+inputParameters:
+  export_file:
+    parameterType: file
+    inputBinding:
+      position: 1
+  comm_file:
+    parameterType: file
+    inputBinding:
+      position: 2
+  mesh_file:
+    parameterType: file
+    inputBinding:
+      position: 3
+outputParameters:
+  plain_mesh:
+    parameterType: file
+    outputBinding:
+      glob: output.rmed
+  resu_file:
+    parameterType: file
+    outputBinding:
+      glob: output.resu

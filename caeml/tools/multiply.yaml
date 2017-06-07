@@ -1,0 +1,18 @@
+caemlType: caeml.common.tools.CommandLineTool
+baseCommand: multiply.py
+name: multiply
+inputParameters:
+    factor1:
+      parameterType: float
+      inputBinding:
+        position: 1
+    factor2:
+      parameterType: float
+      inputBinding:
+        position: 2
+outputParameters:
+  product:
+    parameterType: float
+    outputBinding:
+      glob: stdout.txt
+stdout: stdout.txt

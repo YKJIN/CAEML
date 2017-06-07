@@ -1,0 +1,35 @@
+P actions make_etude
+P aster_root /opt/salome/V2016/tools/Code_aster_frontend-20160
+P consbtc oui
+P debug nodebug
+P display localhost:0
+P follow_output yes
+P mclient localhost
+P memjob 882688
+P memory_limit 862.0
+P mode interactif
+P ncpus 1
+P nomjob linear-static
+P origine salomemeca_asrun 1.10.0
+P platform Linux64
+P protocol_copyfrom asrun.plugins.server.SCPServer
+P protocol_copyto asrun.plugins.server.SCPServer
+P protocol_exec asrun.plugins.server.SSHServer
+P proxy_dir /tmp
+P rep_trav /tmp/anonymous-localhost-interactif.0001-4307-localhost
+P serveur localhost
+P service study
+P soumbtc oui
+P studyid 0001-4307-localhost
+P tpsjob 10
+P uclient anonymous
+P username anonymous
+P version stable
+A memjeveux 107.75
+A tpmax 600
+{{input_deck}}
+{{input_mesh}}
+{{output_1}}
+{{output_2}}
+{{output_3}}
+{{output_4}}

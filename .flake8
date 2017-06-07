@@ -1,0 +1,5 @@
+[flake8]
+#W601 - .has_key() is deprecated, use ‘in’
+ignore = W601
+max-line-length = 119
+exclude = caeml/tools,projects,testproject

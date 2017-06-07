@@ -1,0 +1,14 @@
+caemlType: caeml.common.tools.CommandLineTool
+baseCommand: addListFile.py
+name: addListFile
+inputParameters:
+  addends:
+    parameterType: file
+    inputBinding:
+      position: 1
+      prefix: --addends
+outputParameters:
+  sum:
+    parameterType: file
+    outputBinding:
+      glob: outputValue.txt

@@ -1,0 +1,8 @@
+docker_images:
+  code-aster:
+    path: "code-aster"
+    name: "renumics/code-aster"
+    repository: ""
+    cache: True
+
+

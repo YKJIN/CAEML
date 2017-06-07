@@ -1,0 +1,18 @@
+caemlType: caeml.common.tools.CommandLineTool
+baseCommand: add.py
+name: add___OLD
+stdout: stdout.txt
+inputParameters:
+  addend1:
+    parameterType: float
+    inputBinding:
+      position: 1
+  addend2:
+    parameterType: float
+    inputBinding:
+      position: 2
+outputParameters:
+  sum:
+    parameterType: float
+    outputBinding:
+      glob: stdout.txt

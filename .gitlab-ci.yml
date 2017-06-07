@@ -1,0 +1,24 @@
+test:
+  image: renumics/ci_docker
+  script:
+    - a=$(basename "$(head /proc/1/cgroup)")
+    - docker network connect gitlab_default $a
+    - pip3 install -r requirements.txt
+    - pip3 install coverage
+    - cd /builds/markus.stoll/CAEML
+    - rm testproject/settings.py
+    - mv testproject/settings-ci.py testproject/settings.py
+    - PYTHONPATH=/builds/markus.stoll/CAEML coverage run --source=/builds/markus.stoll/CAEML/caeml/ --omit=/builds/markus.stoll/CAEML/caeml/tools -m unittest discover -s /builds/markus.stoll/CAEML -p 'test_*.py'
+    - coverage report --skip-covered
+    - coverage erase
+  artifacts:
+    when: always
+    paths:
+      - logs/
+
+test-pep8:
+  image: python:3.6-alpine
+  script:
+    - pip3 install flake8
+    - python3 -m flake8
+  allow_failure: true

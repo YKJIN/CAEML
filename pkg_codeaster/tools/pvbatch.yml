@@ -1,0 +1,19 @@
+caemlType: caeml.common.tools.DockerizedCommandLineTool
+baseCommand: /usr/local/bin/pvbatch.py
+name: PvBatch
+stdout: stdout.txt
+dockerImageId: renumics/code-aster
+inputParameters:
+  script_file:
+    parameterType: file
+    inputBinding:
+      position: 1
+  mesh_file:
+    parameterType: file
+    inputBinding:
+      position: 2
+outputParameters:
+  results:
+    parameterType: file
+    outputBinding:
+      glob: output.x3d

@@ -1,0 +1,8 @@
+docker_images:
+  python-occ:
+    path: "coloredStep"
+    name: "renumics/python-occ"
+    repository: ""
+    cache: True
+
+
