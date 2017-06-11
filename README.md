@@ -19,16 +19,14 @@ CAEML contains numerous example and test cases, please refer to the wiki to [get
 ```python
 import caeml
 import settings
-import caeml.common.workflow
-import caeml.tools
-import testproject.tests.base
 from caeml.api import workflowBuilder
 from caeml.api import workflowRunner
 
-#init systems
+
+#init CAEML
 caeml.init(settings)
 
-#create workflow and steps
+#Create workflow and workflow steps
 workflow = workflowBuilder.createWorkflow('TestWorkflow')
 sumStep1 = workflowBuilder.createToolStep('add', workflow, 'Add0')
 sumStep2 = workflowBuilder.createToolStep('add', workflow)
@@ -40,16 +38,19 @@ workflowBuilder.connectPorts(sumListStep1.outputPorts['sum'], sumStep1.inputPort
 workflowBuilder.connectPorts(sumStep1.outputPorts['sum'], sumStep2.inputPorts['addend2'])
 workflowBuilder.connectPorts(sumStep2.outputPorts['sum'], multiplyStep1.inputPorts['factor1'])
 
-# set constants
+# set inputs
 sumListStep1.inputPorts['addends'].fixed_value = [1, 2, 3, 4, 5, 6]
 sumStep1.inputPorts['addend1'].fixed_value = 2
 sumStep2.inputPorts['addend1'].fixed_value = 100
 multiplyStep1.inputPorts['factor2'].fixed_value = 23
 
-#execute workflow
+# execute workflow
 workflowState = workflowRunner.executeAsync(workflow)
 result = workflowState.findPortState(multiplyStep1.outputPorts['product']).getEvaluation()
 print(result)
+
+
+
 
 ```
 
